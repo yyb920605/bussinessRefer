@@ -17,7 +17,7 @@
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
-@interface TLAppDelegate : UIResponder <UIApplicationDelegate>{
+@interface TLAppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate>{
     NSMutableArray *companyList;
     TLCompany *company;
     NSString *loginName;

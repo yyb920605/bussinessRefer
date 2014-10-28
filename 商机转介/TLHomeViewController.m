@@ -131,7 +131,11 @@
     else{
         storyboard = [UIStoryboard storyboardWithName:@"IPhone4MainStoryboard" bundle:nil ];
     }
-    TLReaderViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
+    UIViewController *viewController;
+    if(!viewController){
+     viewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
+    
+    }
     [self.navigationController pushViewController:viewController animated:YES];
 
 
