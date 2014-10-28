@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2QS-fx-Pau">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2QS-fx-Pau">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -739,7 +739,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="F39-cJ-aqh">
-                                <rect key="frame" x="0.0" y="377" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="462" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9807746611" green="0.98182181850000005" blue="0.98912838859999996" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -753,6 +753,16 @@
                                     <action selector="benefit:" destination="RUN-Ed-CWz" eventType="touchUpInside" id="W3h-Ef-ZD8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="myMap" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rJu-gB-AXw">
+                                <rect key="frame" x="128" y="393" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="点我发现">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="faxian:" destination="RUN-Ed-CWz" eventType="touchUpInside" id="z5n-wb-kKa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -763,6 +773,7 @@
                     <connections>
                         <outlet property="faqi" destination="IlY-3c-xeM" id="vl2-un-r9c"/>
                         <outlet property="faqibj" destination="qAb-QF-fUj" id="fMp-d2-AhA"/>
+                        <outlet property="faxian" destination="rJu-gB-AXw" id="kjN-t5-OBP"/>
                         <outlet property="fengxiangbj" destination="BEC-rF-gCJ" id="KzY-Vl-fO0"/>
                         <outlet property="fenxiang" destination="xCz-1s-jwr" id="XAy-Ln-VKX"/>
                         <outlet property="tongji" destination="Yr8-JB-WA6" id="f5W-OI-mHi"/>
@@ -774,6 +785,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuB-gE-to1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1090" y="-2089"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="5XY-nz-UXb">
+            <objects>
+                <viewController storyboardIdentifier="faxian" id="Eqe-j1-SJf" customClass="TLMyMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MyMapController" id="J0l-7R-bLh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VrS-PI-Ta1">
+                                <rect key="frame" x="205" y="39" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAnnotation:" destination="Eqe-j1-SJf" eventType="touchUpInside" id="IUL-fh-fBR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="oKF-nl-b8U" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="85" width="320" height="483"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Sec-ac-uRC"/>
+                    <connections>
+                        <outlet property="mapView" destination="oKF-nl-b8U" id="Jyf-Iw-muB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ET6-Te-vRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704" y="-2160"/>
         </scene>
         <!--商机统计-->
         <scene sceneID="hWZ-6z-XO2">
@@ -1037,7 +1083,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbO-aQ-jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-425" y="-2206"/>
+            <point key="canvasLocation" x="-279" y="-2184"/>
         </scene>
         <!--Benifit View Controller-->
         <scene sceneID="UEQ-Jk-9UK">

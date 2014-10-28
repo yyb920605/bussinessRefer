@@ -95,6 +95,16 @@
     [self.hostReach startNotifier];
     self.flag = 0;
     
+    //BAIDU MAP SDK 初始化
+    _mapManager = [[BMKMapManager alloc]init];
+    
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"gL6vCZec79PPQQglmiNusHfF"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    // Add the navigation controller's view to the window and display.
+    
     //iphone5和iphone5选择不同的storyboard
     UIStoryboard *mainStoryboard = nil;
     if (iPhone5) {

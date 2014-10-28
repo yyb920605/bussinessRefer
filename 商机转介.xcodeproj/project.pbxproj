@@ -456,7 +456,49 @@
 		04FE8881192B74C5002A8805 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = 041C423F18F63B5600391E69 /* main.m */; };
 		04FE8882192B74C5002A8805 /* 商机转介-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 041C424118F63B5600391E69 /* 商机转介-Prefix.pch */; };
 		FCFF8FF319FF30F000420EAD /* TLCompile.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCFF8FF219FF30F000420EAD /* TLCompile.mm */; };
+		FCFF8FF619FF66C600420EAD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF8FF519FF66C600420EAD /* Security.framework */; };
+		FCFF8FF819FF66EF00420EAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF8FF719FF66EF00420EAD /* CoreLocation.framework */; };
+		FCFF8FFA19FF66F600420EAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF8FF919FF66F600420EAD /* OpenGLES.framework */; };
+		FCFF903319FF676200420EAD /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF8FFE19FF676200420EAD /* CNPPopupController.m */; };
+		FCFF903419FF676200420EAD /* CNPPopupTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF900019FF676200420EAD /* CNPPopupTheme.m */; };
+		FCFF903519FF676200420EAD /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = FCFF901419FF676200420EAD /* Manifest.lock */; };
+		FCFF903619FF676200420EAD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FCFF901919FF676200420EAD /* LICENSE */; };
+		FCFF903719FF676200420EAD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FCFF901A19FF676200420EAD /* README.md */; };
+		FCFF903819FF676200420EAD /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF901D19FF676200420EAD /* ALView+PureLayout.m */; };
+		FCFF903919FF676200420EAD /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF901F19FF676200420EAD /* NSArray+PureLayout.m */; };
+		FCFF903A19FF676200420EAD /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF902119FF676200420EAD /* NSLayoutConstraint+PureLayout.m */; };
+		FCFF903B19FF676200420EAD /* Pods-acknowledgements.markdown in Sources */ = {isa = PBXBuildFile; fileRef = FCFF902719FF676200420EAD /* Pods-acknowledgements.markdown */; };
+		FCFF903C19FF676200420EAD /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCFF902819FF676200420EAD /* Pods-acknowledgements.plist */; };
+		FCFF903D19FF676200420EAD /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF902919FF676200420EAD /* Pods-dummy.m */; };
+		FCFF903E19FF676200420EAD /* Pods-resources.sh in Resources */ = {isa = PBXBuildFile; fileRef = FCFF902B19FF676200420EAD /* Pods-resources.sh */; };
+		FCFF903F19FF676200420EAD /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FCFF902C19FF676200420EAD /* Pods.debug.xcconfig */; };
+		FCFF904019FF676200420EAD /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FCFF902D19FF676200420EAD /* Pods.release.xcconfig */; };
+		FCFF904119FF676200420EAD /* Pods-PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF902F19FF676200420EAD /* Pods-PureLayout-dummy.m */; };
+		FCFF904219FF676200420EAD /* Pods-PureLayout-Private.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FCFF903119FF676200420EAD /* Pods-PureLayout-Private.xcconfig */; };
+		FCFF904319FF676200420EAD /* Pods-PureLayout.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FCFF903219FF676200420EAD /* Pods-PureLayout.xcconfig */; };
+		FCFF908A19FF67F400420EAD /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF908819FF67F400420EAD /* libbaidumapapi.a */; };
+		FCFF908B19FF67F400420EAD /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCFF908919FF67F400420EAD /* mapapi.bundle */; };
+		FCFF908E19FF68C600420EAD /* TLMyMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF908D19FF68C600420EAD /* TLMyMapViewController.m */; };
+		FCFF909319FF691C00420EAD /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF909019FF691C00420EAD /* Position.m */; };
+		FCFF909419FF691C00420EAD /* MyPositionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFF909219FF691C00420EAD /* MyPositionAnnotation.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCFF904619FF676200420EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCFF901519FF676200420EAD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63FB50333545E7B01FFAD4DD;
+			remoteInfo = Pods;
+		};
+		FCFF904819FF676200420EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCFF901519FF676200420EAD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE5131C4F77C7E23917578A0;
+			remoteInfo = "Pods-PureLayout";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0400A98A191EF9AE00FB9AEF /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShareSDK.framework; path = ShareSDK/ShareSDK.framework; sourceTree = "<group>"; };
@@ -1053,6 +1095,118 @@
 		04FBD40C19502C2E004355B0 /* welcome44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome44.png; sourceTree = "<group>"; };
 		04FBD40D19502C2E004355B0 /* welcome45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome45.png; sourceTree = "<group>"; };
 		FCFF8FF219FF30F000420EAD /* TLCompile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TLCompile.mm; sourceTree = "<group>"; };
+		FCFF8FF519FF66C600420EAD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FCFF8FF719FF66EF00420EAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FCFF8FF919FF66F600420EAD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		FCFF8FFD19FF676200420EAD /* CNPPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPPopupController.h; sourceTree = "<group>"; };
+		FCFF8FFE19FF676200420EAD /* CNPPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPPopupController.m; sourceTree = "<group>"; };
+		FCFF8FFF19FF676200420EAD /* CNPPopupTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPPopupTheme.h; sourceTree = "<group>"; };
+		FCFF900019FF676200420EAD /* CNPPopupTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPPopupTheme.m; sourceTree = "<group>"; };
+		FCFF900519FF676200420EAD /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF900619FF676200420EAD /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF900719FF676200420EAD /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF900819FF676200420EAD /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		FCFF900919FF676200420EAD /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		FCFF900A19FF676200420EAD /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		FCFF900D19FF676200420EAD /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF900E19FF676200420EAD /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF900F19FF676200420EAD /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF901019FF676200420EAD /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		FCFF901119FF676200420EAD /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		FCFF901219FF676200420EAD /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		FCFF901419FF676200420EAD /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
+		FCFF901519FF676200420EAD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		FCFF901919FF676200420EAD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FCFF901A19FF676200420EAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCFF901C19FF676200420EAD /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF901D19FF676200420EAD /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		FCFF901E19FF676200420EAD /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF901F19FF676200420EAD /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		FCFF902019FF676200420EAD /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		FCFF902119FF676200420EAD /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		FCFF902219FF676200420EAD /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		FCFF902319FF676200420EAD /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		FCFF902419FF676200420EAD /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		FCFF902719FF676200420EAD /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FCFF902819FF676200420EAD /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		FCFF902919FF676200420EAD /* Pods-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		FCFF902A19FF676200420EAD /* Pods-environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		FCFF902B19FF676200420EAD /* Pods-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		FCFF902C19FF676200420EAD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		FCFF902D19FF676200420EAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		FCFF902F19FF676200420EAD /* Pods-PureLayout-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-PureLayout-dummy.m"; sourceTree = "<group>"; };
+		FCFF903019FF676200420EAD /* Pods-PureLayout-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		FCFF903119FF676200420EAD /* Pods-PureLayout-Private.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		FCFF903219FF676200420EAD /* Pods-PureLayout.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-PureLayout.xcconfig"; sourceTree = "<group>"; };
+		FCFF904B19FF67F400420EAD /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
+		FCFF904C19FF67F400420EAD /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
+		FCFF904D19FF67F400420EAD /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
+		FCFF904E19FF67F400420EAD /* BMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotationView.h; sourceTree = "<group>"; };
+		FCFF904F19FF67F400420EAD /* BMKArcline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKArcline.h; sourceTree = "<group>"; };
+		FCFF905019FF67F400420EAD /* BMKArclineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKArclineView.h; sourceTree = "<group>"; };
+		FCFF905119FF67F400420EAD /* BMKBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKBaseComponent.h; sourceTree = "<group>"; };
+		FCFF905219FF67F400420EAD /* BMKBusLineSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKBusLineSearch.h; sourceTree = "<group>"; };
+		FCFF905319FF67F400420EAD /* BMKBusLineSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKBusLineSearchOption.h; sourceTree = "<group>"; };
+		FCFF905419FF67F400420EAD /* BMKCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCircle.h; sourceTree = "<group>"; };
+		FCFF905519FF67F400420EAD /* BMKCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCircleView.h; sourceTree = "<group>"; };
+		FCFF905619FF67F400420EAD /* BMKCloudPOIList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCloudPOIList.h; sourceTree = "<group>"; };
+		FCFF905719FF67F400420EAD /* BMKCloudSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCloudSearch.h; sourceTree = "<group>"; };
+		FCFF905819FF67F400420EAD /* BMKCloudSearchComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCloudSearchComponent.h; sourceTree = "<group>"; };
+		FCFF905919FF67F400420EAD /* BMKCloudSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCloudSearchInfo.h; sourceTree = "<group>"; };
+		FCFF905A19FF67F400420EAD /* BMKGeneralDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeneralDelegate.h; sourceTree = "<group>"; };
+		FCFF905B19FF67F400420EAD /* BMKGeocodeSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeocodeSearch.h; sourceTree = "<group>"; };
+		FCFF905C19FF67F400420EAD /* BMKGeocodeSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeocodeSearchOption.h; sourceTree = "<group>"; };
+		FCFF905D19FF67F400420EAD /* BMKGeocodeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeocodeType.h; sourceTree = "<group>"; };
+		FCFF905E19FF67F400420EAD /* BMKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeometry.h; sourceTree = "<group>"; };
+		FCFF905F19FF67F400420EAD /* BMKGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGradient.h; sourceTree = "<group>"; };
+		FCFF906019FF67F400420EAD /* BMKGroundOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGroundOverlay.h; sourceTree = "<group>"; };
+		FCFF906119FF67F400420EAD /* BMKGroundOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGroundOverlayView.h; sourceTree = "<group>"; };
+		FCFF906219FF67F400420EAD /* BMKHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKHeatMap.h; sourceTree = "<group>"; };
+		FCFF906319FF67F400420EAD /* BMKLocationComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKLocationComponent.h; sourceTree = "<group>"; };
+		FCFF906419FF67F400420EAD /* BMKLocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKLocationService.h; sourceTree = "<group>"; };
+		FCFF906519FF67F400420EAD /* BMKLocationViewDisplayParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKLocationViewDisplayParam.h; sourceTree = "<group>"; };
+		FCFF906619FF67F400420EAD /* BMKMapComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapComponent.h; sourceTree = "<group>"; };
+		FCFF906719FF67F400420EAD /* BMKMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapManager.h; sourceTree = "<group>"; };
+		FCFF906819FF67F400420EAD /* BMKMapStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapStatus.h; sourceTree = "<group>"; };
+		FCFF906919FF67F400420EAD /* BMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapView.h; sourceTree = "<group>"; };
+		FCFF906A19FF67F400420EAD /* BMKMultiPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMultiPoint.h; sourceTree = "<group>"; };
+		FCFF906B19FF67F400420EAD /* BMKNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKNavigation.h; sourceTree = "<group>"; };
+		FCFF906C19FF67F400420EAD /* BMKOfflineMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOfflineMap.h; sourceTree = "<group>"; };
+		FCFF906D19FF67F400420EAD /* BMKOfflineMapType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOfflineMapType.h; sourceTree = "<group>"; };
+		FCFF906E19FF67F400420EAD /* BMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlay.h; sourceTree = "<group>"; };
+		FCFF906F19FF67F400420EAD /* BMKOverlayGLBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlayGLBasicView.h; sourceTree = "<group>"; };
+		FCFF907019FF67F400420EAD /* BMKOverlayPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlayPathView.h; sourceTree = "<group>"; };
+		FCFF907119FF67F400420EAD /* BMKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlayView.h; sourceTree = "<group>"; };
+		FCFF907219FF67F400420EAD /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPinAnnotationView.h; sourceTree = "<group>"; };
+		FCFF907319FF67F400420EAD /* BMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPointAnnotation.h; sourceTree = "<group>"; };
+		FCFF907419FF67F400420EAD /* BMKPoiSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPoiSearch.h; sourceTree = "<group>"; };
+		FCFF907519FF67F400420EAD /* BMKPoiSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPoiSearchOption.h; sourceTree = "<group>"; };
+		FCFF907619FF67F400420EAD /* BMKPoiSearchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPoiSearchType.h; sourceTree = "<group>"; };
+		FCFF907719FF67F400420EAD /* BMKPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolygon.h; sourceTree = "<group>"; };
+		FCFF907819FF67F400420EAD /* BMKPolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolygonView.h; sourceTree = "<group>"; };
+		FCFF907919FF67F400420EAD /* BMKPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolyline.h; sourceTree = "<group>"; };
+		FCFF907A19FF67F400420EAD /* BMKPolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolylineView.h; sourceTree = "<group>"; };
+		FCFF907B19FF67F400420EAD /* BMKRouteSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKRouteSearch.h; sourceTree = "<group>"; };
+		FCFF907C19FF67F400420EAD /* BMKRouteSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKRouteSearchOption.h; sourceTree = "<group>"; };
+		FCFF907D19FF67F400420EAD /* BMKRouteSearchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKRouteSearchType.h; sourceTree = "<group>"; };
+		FCFF907E19FF67F400420EAD /* BMKSearchComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKSearchComponent.h; sourceTree = "<group>"; };
+		FCFF907F19FF67F400420EAD /* BMKShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKShape.h; sourceTree = "<group>"; };
+		FCFF908019FF67F400420EAD /* BMKShareURLSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKShareURLSearch.h; sourceTree = "<group>"; };
+		FCFF908119FF67F400420EAD /* BMKShareUrlSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKShareUrlSearchOption.h; sourceTree = "<group>"; };
+		FCFF908219FF67F400420EAD /* BMKSuggestionSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKSuggestionSearch.h; sourceTree = "<group>"; };
+		FCFF908319FF67F400420EAD /* BMKSuggestionSearchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKSuggestionSearchOption.h; sourceTree = "<group>"; };
+		FCFF908419FF67F400420EAD /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
+		FCFF908519FF67F400420EAD /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
+		FCFF908619FF67F400420EAD /* BMKUtilsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUtilsComponent.h; sourceTree = "<group>"; };
+		FCFF908719FF67F400420EAD /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
+		FCFF908819FF67F400420EAD /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
+		FCFF908919FF67F400420EAD /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		FCFF908C19FF68C600420EAD /* TLMyMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMyMapViewController.h; sourceTree = "<group>"; };
+		FCFF908D19FF68C600420EAD /* TLMyMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMyMapViewController.m; sourceTree = "<group>"; };
+		FCFF908F19FF691C00420EAD /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		FCFF909019FF691C00420EAD /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		FCFF909119FF691C00420EAD /* MyPositionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPositionAnnotation.h; sourceTree = "<group>"; };
+		FCFF909219FF691C00420EAD /* MyPositionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPositionAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1060,6 +1214,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFF8FFA19FF66F600420EAD /* OpenGLES.framework in Frameworks */,
+				FCFF8FF819FF66EF00420EAD /* CoreLocation.framework in Frameworks */,
+				041C43BC18F64EE600391E69 /* QuartzCore.framework in Frameworks */,
+				041C43C818F665F600391E69 /* SystemConfiguration.framework in Frameworks */,
+				041C423618F63B5600391E69 /* CoreGraphics.framework in Frameworks */,
+				FCFF8FF619FF66C600420EAD /* Security.framework in Frameworks */,
 				0427F48919F9EE0700587151 /* LinkedInConnection.framework in Frameworks */,
 				0427F4A119F9EE0700587151 /* Pinterest.framework in Frameworks */,
 				0432D35B19234135001B7DB4 /* libWeChatSDK.a in Frameworks */,
@@ -1090,9 +1250,7 @@
 				0427F4B719F9EE0700587151 /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */,
 				0427F48019F9EE0700587151 /* DouBanConnection.framework in Frameworks */,
 				041C43CA18F665FD00391E69 /* CFNetwork.framework in Frameworks */,
-				041C43C818F665F600391E69 /* SystemConfiguration.framework in Frameworks */,
 				041C43C618F665E900391E69 /* MobileCoreServices.framework in Frameworks */,
-				041C423618F63B5600391E69 /* CoreGraphics.framework in Frameworks */,
 				0427F4A919F9EE0700587151 /* libTCWeiboSDK.a in Frameworks */,
 				0427F4AC19F9EE0700587151 /* ShareSDK.framework in Frameworks */,
 				0427F48A19F9EE0700587151 /* MailConnection.framework in Frameworks */,
@@ -1109,7 +1267,6 @@
 				041C43BE18F64EF800391E69 /* CoreVideo.framework in Frameworks */,
 				0427F48519F9EE0700587151 /* InstagramConnection.framework in Frameworks */,
 				0427F48F19F9EE0700587151 /* QZoneConnection.framework in Frameworks */,
-				041C43BC18F64EE600391E69 /* QuartzCore.framework in Frameworks */,
 				0427F49519F9EE0700587151 /* T163WeiboConnection.framework in Frameworks */,
 				0427F49A19F9EE0700587151 /* WeChatConnection.framework in Frameworks */,
 				0427F48819F9EE0700587151 /* KaiXinConnection.framework in Frameworks */,
@@ -1124,6 +1281,7 @@
 				0427F48D19F9EE0700587151 /* PrintConnection.framework in Frameworks */,
 				0427F49819F9EE0700587151 /* TwitterConnection.framework in Frameworks */,
 				041C423818F63B5600391E69 /* UIKit.framework in Frameworks */,
+				FCFF908A19FF67F400420EAD /* libbaidumapapi.a in Frameworks */,
 				041C437E18F63D5E00391E69 /* libzbar.a in Frameworks */,
 				041C423418F63B5600391E69 /* Foundation.framework in Frameworks */,
 			);
@@ -1282,6 +1440,9 @@
 		041C423218F63B5600391E69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCFF8FF919FF66F600420EAD /* OpenGLES.framework */,
+				FCFF8FF719FF66EF00420EAD /* CoreLocation.framework */,
+				FCFF8FF519FF66C600420EAD /* Security.framework */,
 				0400A9B1191F025400FB9AEF /* CoreTelephony.framework */,
 				0400A9AE191EFE5000FB9AEF /* libWeChatSDK.a */,
 				0400A98E191EFDF000FB9AEF /* Connection */,
@@ -2254,9 +2415,239 @@
 		FCFF8FF119FF30CE00420EAD /* myMap */ = {
 			isa = PBXGroup;
 			children = (
+				FCFF908F19FF691C00420EAD /* Position.h */,
+				FCFF909019FF691C00420EAD /* Position.m */,
+				FCFF909119FF691C00420EAD /* MyPositionAnnotation.h */,
+				FCFF909219FF691C00420EAD /* MyPositionAnnotation.m */,
+				FCFF904A19FF67F400420EAD /* inc */,
+				FCFF908819FF67F400420EAD /* libbaidumapapi.a */,
+				FCFF908919FF67F400420EAD /* mapapi.bundle */,
+				FCFF8FFC19FF676200420EAD /* CNPPopupController */,
+				FCFF900119FF676200420EAD /* Pods */,
 				FCFF8FF219FF30F000420EAD /* TLCompile.mm */,
+				FCFF908C19FF68C600420EAD /* TLMyMapViewController.h */,
+				FCFF908D19FF68C600420EAD /* TLMyMapViewController.m */,
 			);
 			name = myMap;
+			sourceTree = "<group>";
+		};
+		FCFF8FFC19FF676200420EAD /* CNPPopupController */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF8FFD19FF676200420EAD /* CNPPopupController.h */,
+				FCFF8FFE19FF676200420EAD /* CNPPopupController.m */,
+				FCFF8FFF19FF676200420EAD /* CNPPopupTheme.h */,
+				FCFF900019FF676200420EAD /* CNPPopupTheme.m */,
+			);
+			path = CNPPopupController;
+			sourceTree = "<group>";
+		};
+		FCFF900119FF676200420EAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900219FF676200420EAD /* Headers */,
+				FCFF901319FF676200420EAD /* Local Podspecs */,
+				FCFF901419FF676200420EAD /* Manifest.lock */,
+				FCFF901519FF676200420EAD /* Pods.xcodeproj */,
+				FCFF901819FF676200420EAD /* PureLayout */,
+				FCFF902519FF676200420EAD /* Target Support Files */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCFF900219FF676200420EAD /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900319FF676200420EAD /* Build */,
+				FCFF900B19FF676200420EAD /* Public */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		FCFF900319FF676200420EAD /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900419FF676200420EAD /* PureLayout */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		FCFF900419FF676200420EAD /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900519FF676200420EAD /* ALView+PureLayout.h */,
+				FCFF900619FF676200420EAD /* NSArray+PureLayout.h */,
+				FCFF900719FF676200420EAD /* NSLayoutConstraint+PureLayout.h */,
+				FCFF900819FF676200420EAD /* PureLayout+Internal.h */,
+				FCFF900919FF676200420EAD /* PureLayout.h */,
+				FCFF900A19FF676200420EAD /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		FCFF900B19FF676200420EAD /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900C19FF676200420EAD /* PureLayout */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		FCFF900C19FF676200420EAD /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF900D19FF676200420EAD /* ALView+PureLayout.h */,
+				FCFF900E19FF676200420EAD /* NSArray+PureLayout.h */,
+				FCFF900F19FF676200420EAD /* NSLayoutConstraint+PureLayout.h */,
+				FCFF901019FF676200420EAD /* PureLayout+Internal.h */,
+				FCFF901119FF676200420EAD /* PureLayout.h */,
+				FCFF901219FF676200420EAD /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		FCFF901319FF676200420EAD /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		FCFF901619FF676200420EAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF904719FF676200420EAD /* libPods.a */,
+				FCFF904919FF676200420EAD /* libPods-PureLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCFF901819FF676200420EAD /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF901919FF676200420EAD /* LICENSE */,
+				FCFF901A19FF676200420EAD /* README.md */,
+				FCFF901B19FF676200420EAD /* Source */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		FCFF901B19FF676200420EAD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF901C19FF676200420EAD /* ALView+PureLayout.h */,
+				FCFF901D19FF676200420EAD /* ALView+PureLayout.m */,
+				FCFF901E19FF676200420EAD /* NSArray+PureLayout.h */,
+				FCFF901F19FF676200420EAD /* NSArray+PureLayout.m */,
+				FCFF902019FF676200420EAD /* NSLayoutConstraint+PureLayout.h */,
+				FCFF902119FF676200420EAD /* NSLayoutConstraint+PureLayout.m */,
+				FCFF902219FF676200420EAD /* PureLayout+Internal.h */,
+				FCFF902319FF676200420EAD /* PureLayout.h */,
+				FCFF902419FF676200420EAD /* PureLayoutDefines.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FCFF902519FF676200420EAD /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF902619FF676200420EAD /* Pods */,
+				FCFF902E19FF676200420EAD /* Pods-PureLayout */,
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		FCFF902619FF676200420EAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF902719FF676200420EAD /* Pods-acknowledgements.markdown */,
+				FCFF902819FF676200420EAD /* Pods-acknowledgements.plist */,
+				FCFF902919FF676200420EAD /* Pods-dummy.m */,
+				FCFF902A19FF676200420EAD /* Pods-environment.h */,
+				FCFF902B19FF676200420EAD /* Pods-resources.sh */,
+				FCFF902C19FF676200420EAD /* Pods.debug.xcconfig */,
+				FCFF902D19FF676200420EAD /* Pods.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCFF902E19FF676200420EAD /* Pods-PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF902F19FF676200420EAD /* Pods-PureLayout-dummy.m */,
+				FCFF903019FF676200420EAD /* Pods-PureLayout-prefix.pch */,
+				FCFF903119FF676200420EAD /* Pods-PureLayout-Private.xcconfig */,
+				FCFF903219FF676200420EAD /* Pods-PureLayout.xcconfig */,
+			);
+			path = "Pods-PureLayout";
+			sourceTree = "<group>";
+		};
+		FCFF904A19FF67F400420EAD /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF904B19FF67F400420EAD /* BMapKit.h */,
+				FCFF904C19FF67F400420EAD /* BMKActionPaopaoView.h */,
+				FCFF904D19FF67F400420EAD /* BMKAnnotation.h */,
+				FCFF904E19FF67F400420EAD /* BMKAnnotationView.h */,
+				FCFF904F19FF67F400420EAD /* BMKArcline.h */,
+				FCFF905019FF67F400420EAD /* BMKArclineView.h */,
+				FCFF905119FF67F400420EAD /* BMKBaseComponent.h */,
+				FCFF905219FF67F400420EAD /* BMKBusLineSearch.h */,
+				FCFF905319FF67F400420EAD /* BMKBusLineSearchOption.h */,
+				FCFF905419FF67F400420EAD /* BMKCircle.h */,
+				FCFF905519FF67F400420EAD /* BMKCircleView.h */,
+				FCFF905619FF67F400420EAD /* BMKCloudPOIList.h */,
+				FCFF905719FF67F400420EAD /* BMKCloudSearch.h */,
+				FCFF905819FF67F400420EAD /* BMKCloudSearchComponent.h */,
+				FCFF905919FF67F400420EAD /* BMKCloudSearchInfo.h */,
+				FCFF905A19FF67F400420EAD /* BMKGeneralDelegate.h */,
+				FCFF905B19FF67F400420EAD /* BMKGeocodeSearch.h */,
+				FCFF905C19FF67F400420EAD /* BMKGeocodeSearchOption.h */,
+				FCFF905D19FF67F400420EAD /* BMKGeocodeType.h */,
+				FCFF905E19FF67F400420EAD /* BMKGeometry.h */,
+				FCFF905F19FF67F400420EAD /* BMKGradient.h */,
+				FCFF906019FF67F400420EAD /* BMKGroundOverlay.h */,
+				FCFF906119FF67F400420EAD /* BMKGroundOverlayView.h */,
+				FCFF906219FF67F400420EAD /* BMKHeatMap.h */,
+				FCFF906319FF67F400420EAD /* BMKLocationComponent.h */,
+				FCFF906419FF67F400420EAD /* BMKLocationService.h */,
+				FCFF906519FF67F400420EAD /* BMKLocationViewDisplayParam.h */,
+				FCFF906619FF67F400420EAD /* BMKMapComponent.h */,
+				FCFF906719FF67F400420EAD /* BMKMapManager.h */,
+				FCFF906819FF67F400420EAD /* BMKMapStatus.h */,
+				FCFF906919FF67F400420EAD /* BMKMapView.h */,
+				FCFF906A19FF67F400420EAD /* BMKMultiPoint.h */,
+				FCFF906B19FF67F400420EAD /* BMKNavigation.h */,
+				FCFF906C19FF67F400420EAD /* BMKOfflineMap.h */,
+				FCFF906D19FF67F400420EAD /* BMKOfflineMapType.h */,
+				FCFF906E19FF67F400420EAD /* BMKOverlay.h */,
+				FCFF906F19FF67F400420EAD /* BMKOverlayGLBasicView.h */,
+				FCFF907019FF67F400420EAD /* BMKOverlayPathView.h */,
+				FCFF907119FF67F400420EAD /* BMKOverlayView.h */,
+				FCFF907219FF67F400420EAD /* BMKPinAnnotationView.h */,
+				FCFF907319FF67F400420EAD /* BMKPointAnnotation.h */,
+				FCFF907419FF67F400420EAD /* BMKPoiSearch.h */,
+				FCFF907519FF67F400420EAD /* BMKPoiSearchOption.h */,
+				FCFF907619FF67F400420EAD /* BMKPoiSearchType.h */,
+				FCFF907719FF67F400420EAD /* BMKPolygon.h */,
+				FCFF907819FF67F400420EAD /* BMKPolygonView.h */,
+				FCFF907919FF67F400420EAD /* BMKPolyline.h */,
+				FCFF907A19FF67F400420EAD /* BMKPolylineView.h */,
+				FCFF907B19FF67F400420EAD /* BMKRouteSearch.h */,
+				FCFF907C19FF67F400420EAD /* BMKRouteSearchOption.h */,
+				FCFF907D19FF67F400420EAD /* BMKRouteSearchType.h */,
+				FCFF907E19FF67F400420EAD /* BMKSearchComponent.h */,
+				FCFF907F19FF67F400420EAD /* BMKShape.h */,
+				FCFF908019FF67F400420EAD /* BMKShareURLSearch.h */,
+				FCFF908119FF67F400420EAD /* BMKShareUrlSearchOption.h */,
+				FCFF908219FF67F400420EAD /* BMKSuggestionSearch.h */,
+				FCFF908319FF67F400420EAD /* BMKSuggestionSearchOption.h */,
+				FCFF908419FF67F400420EAD /* BMKTypes.h */,
+				FCFF908519FF67F400420EAD /* BMKUserLocation.h */,
+				FCFF908619FF67F400420EAD /* BMKUtilsComponent.h */,
+				FCFF908719FF67F400420EAD /* BMKVersion.h */,
+			);
+			path = inc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2306,12 +2697,35 @@
 			mainGroup = 041C422718F63B5600391E69;
 			productRefGroup = 041C423118F63B5600391E69 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FCFF901619FF676200420EAD /* Products */;
+					ProjectRef = FCFF901519FF676200420EAD /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				041C422F18F63B5600391E69 /* 商机转介 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FCFF904719FF676200420EAD /* libPods.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPods.a;
+			remoteRef = FCFF904619FF676200420EAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FCFF904919FF676200420EAD /* libPods-PureLayout.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-PureLayout.a";
+			remoteRef = FCFF904819FF676200420EAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		041C422E18F63B5600391E69 /* Resources */ = {
@@ -2346,6 +2760,7 @@
 				044C3102197E369200058EA6 /* 银行卡直角.png in Resources */,
 				0423D00D19613B47009FDFB2 /* 首页48.png in Resources */,
 				04403378190F5550000356A2 /* 登陆界面bg.png in Resources */,
+				FCFF904219FF676200420EAD /* Pods-PureLayout-Private.xcconfig in Resources */,
 				0429EF93191A43A1001B8E78 /* 短信分享.png in Resources */,
 				043E19D5191795CB0062B7C4 /* 银行卡修改.png in Resources */,
 				0470005619D262E8002A6029 /* 账户1.png in Resources */,
@@ -2360,6 +2775,7 @@
 				0445B02919E8C2D6007B3E22 /* 台头11.png in Resources */,
 				0450233A196FCB6500E62151 /* 0002.png in Resources */,
 				0445B01419E7CD8E007B3E22 /* 近6周收益2.png in Resources */,
+				FCFF903619FF676200420EAD /* LICENSE in Resources */,
 				041C438518F63D5E00391E69 /* B0ECB0F4-47F6-491D-8E6C-E241703B6DC7.png in Resources */,
 				0445AFE819E63CA0007B3E22 /* 登陆.png in Resources */,
 				0445AFE319E63CA0007B3E22 /* 完成.png in Resources */,
@@ -2378,6 +2794,7 @@
 				041C439818F63D5E00391E69 /* 提交.png in Resources */,
 				043BEB4D1908DE0500BEF5C1 /* help32..png in Resources */,
 				041C438418F63D5E00391E69 /* 57-57.png in Resources */,
+				FCFF904019FF676200420EAD /* Pods.release.xcconfig in Resources */,
 				041C438618F63D5E00391E69 /* Default-568h@2x.png in Resources */,
 				041C435E18F63D5E00391E69 /* phonecall.png in Resources */,
 				0445B01A19E7DC1C007B3E22 /* 个人444.png in Resources */,
@@ -2388,9 +2805,11 @@
 				041C436418F63D5E00391E69 /* search2.png in Resources */,
 				043E19C81917799E0062B7C4 /* 商机转介修改.png in Resources */,
 				0423D01219613B47009FDFB2 /* 推荐人统计最新.png in Resources */,
+				FCFF903519FF676200420EAD /* Manifest.lock in Resources */,
 				0423D00A19613B47009FDFB2 /* 关于48.png in Resources */,
 				04383EC5190A370200D19065 /* topbar.png in Resources */,
 				0403832C1916114200956A09 /* 登陆界面.png in Resources */,
+				FCFF903C19FF676200420EAD /* Pods-acknowledgements.plist in Resources */,
 				041C438218F63D5E00391E69 /* zbar-samples.png in Resources */,
 				04296A0219D5443400031748 /* 进行.png in Resources */,
 				0445B01519E7CD8E007B3E22 /* 近6月收益.png in Resources */,
@@ -2403,6 +2822,7 @@
 				0403832A19160F5300956A09 /* 登陆界面54.png in Resources */,
 				043BEB6A1908F09400BEF5C1 /* 取消.jpg in Resources */,
 				0450233B196FCB6500E62151 /* 0003.png in Resources */,
+				FCFF903E19FF676200420EAD /* Pods-resources.sh in Resources */,
 				041C438318F63D5E00391E69 /* 114-114.png in Resources */,
 				041C434718F63D5E00391E69 /* checkbox_unselect_press.png in Resources */,
 				041C423E18F63B5600391E69 /* InfoPlist.strings in Resources */,
@@ -2425,6 +2845,7 @@
 				043BEB731908F09400BEF5C1 /* 银行卡变更.jpg in Resources */,
 				04C7399B19EF761E00A2A202 /* about3333.png in Resources */,
 				0423D01419613B47009FDFB2 /* 银行卡最新.png in Resources */,
+				FCFF903F19FF676200420EAD /* Pods.debug.xcconfig in Resources */,
 				04383EBD190A370200D19065 /* logo_setPayPwd.png in Resources */,
 				043E19D2191792A20062B7C4 /* 帮助.png in Resources */,
 				0445AFE419E63CA0007B3E22 /* 完成2.png in Resources */,
@@ -2443,6 +2864,7 @@
 				040D957719D164670055FA3D /* 个人.png in Resources */,
 				0420F8381957C1E8005774EB /* 互动助手108.png in Resources */,
 				0445AFE119E63CA0007B3E22 /* phone.png in Resources */,
+				FCFF904319FF676200420EAD /* Pods-PureLayout.xcconfig in Resources */,
 				041C436918F63D5E00391E69 /* titlebar_backbutton.png in Resources */,
 				041C436018F63D5E00391E69 /* photo_img_btn.png in Resources */,
 				043E19CC1917831F0062B7C4 /* 商机转介详情.png in Resources */,
@@ -2560,6 +2982,7 @@
 				044C30FF197E369200058EA6 /* 商机发起直角.png in Resources */,
 				0470005319D262E8002A6029 /* 主页21.png in Resources */,
 				041C439718F63D5E00391E69 /* 快速录入.PNG in Resources */,
+				FCFF908B19FF67F400420EAD /* mapapi.bundle in Resources */,
 				0427F4B619F9EE0700587151 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				0403833319161B9100956A09 /* 找回密码.png in Resources */,
 				0445B02519E8BE44007B3E22 /* 忘记密码1.png in Resources */,
@@ -2636,13 +3059,17 @@
 				041C43A718F63D5E00391E69 /* TLListInListViewController.m in Sources */,
 				041FFA1E1906502D0027743C /* TLChanceListViewController.m in Sources */,
 				0417E57218FB6EF400251B00 /* TLAllBusinessTableViewController.m in Sources */,
+				FCFF903419FF676200420EAD /* CNPPopupTheme.m in Sources */,
 				041C439918F63D5E00391E69 /* TLAboutController.m in Sources */,
 				043C7B2319B6BFAF00074CAA /* TLBenefitTableViewController.m in Sources */,
+				FCFF909419FF691C00420EAD /* MyPositionAnnotation.m in Sources */,
 				041C43B718F63D5E00391E69 /* TLWorkListTableViewController.m in Sources */,
 				041C437618F63D5E00391E69 /* ASIFormDataRequest.m in Sources */,
+				FCFF903B19FF676200420EAD /* Pods-acknowledgements.markdown in Sources */,
 				041C43A518F63D5E00391E69 /* TLImage.m in Sources */,
 				041C439B18F63D5E00391E69 /* TLBranch.m in Sources */,
 				041C43AD18F63D5E00391E69 /* TLPhotoListViewController.m in Sources */,
+				FCFF903819FF676200420EAD /* ALView+PureLayout.m in Sources */,
 				041C439F18F63D5E00391E69 /* TLChangsuoViewController.m in Sources */,
 				0419CFEA19B953EB000CB0B9 /* GenericViewController.m in Sources */,
 				041C43AB18F63D5E00391E69 /* TLNotSubmmitViewController.m in Sources */,
@@ -2651,7 +3078,9 @@
 				0429EF8B191A10CA001B8E78 /* TLChangePswViewController.m in Sources */,
 				04B4C90919F8990800F1A0A0 /* TSPopoverController.m in Sources */,
 				04F1CCB21907A0E400E90921 /* TLRecommanderManagementViewController.m in Sources */,
+				FCFF908E19FF68C600420EAD /* TLMyMapViewController.m in Sources */,
 				041FFA27190665B50027743C /* TLChanceListCell.m in Sources */,
+				FCFF909319FF691C00420EAD /* Position.m in Sources */,
 				04B4C90819F8990800F1A0A0 /* TSActionSheet.m in Sources */,
 				041C43B118F63D5E00391E69 /* TLRecallPhotoViewController.m in Sources */,
 				04B4C90C19F8990800F1A0A0 /* UIBarButtonItem+WEPopover.m in Sources */,
@@ -2661,11 +3090,13 @@
 				04B4C90F19F8996500F1A0A0 /* TSTableTableViewController.m in Sources */,
 				041C43A818F63D5E00391E69 /* TLLoginViewController.m in Sources */,
 				0417E58118FBC80E00251B00 /* TLBankcardViewController.m in Sources */,
+				FCFF904119FF676200420EAD /* Pods-PureLayout-dummy.m in Sources */,
 				041920FD1945905100548435 /* SGFocusImageFrame.m in Sources */,
 				041C439C18F63D5E00391E69 /* TLBranchViewController.m in Sources */,
 				041C43B018F63D5E00391E69 /* TLReaderViewController.m in Sources */,
 				041C437418F63D5E00391E69 /* ASIAuthenticationDialog.m in Sources */,
 				041920FE1945905100548435 /* SGFocusImageItem.m in Sources */,
+				FCFF903A19FF676200420EAD /* NSLayoutConstraint+PureLayout.m in Sources */,
 				04B4C90B19F8990800F1A0A0 /* TSPopoverTouchView.m in Sources */,
 				040383311916199800956A09 /* TLFindPswViewController.m in Sources */,
 				041C43A618F63D5E00391E69 /* TLImageViewController.m in Sources */,
@@ -2674,6 +3105,7 @@
 				043C7B2619B6EDDB00074CAA /* TLBenefitCell.m in Sources */,
 				0419CFE719B9524D000CB0B9 /* PCLineChartView.m in Sources */,
 				041C43B318F63D5E00391E69 /* TLRegister.m in Sources */,
+				FCFF903D19FF676200420EAD /* Pods-dummy.m in Sources */,
 				0417E57E18FBB1FB00251B00 /* TLRecommanderCell.m in Sources */,
 				041C43A018F63D5E00391E69 /* TLCompaniesController.m in Sources */,
 				041C43B418F63D5E00391E69 /* TLRootTableViewController.m in Sources */,
@@ -2682,12 +3114,14 @@
 				04F1CCAF19078ED400E90921 /* TLProfitController.m in Sources */,
 				0429EF8F191A2B97001B8E78 /* TLShareByMessageViewController.m in Sources */,
 				04B4C91319F8D15400F1A0A0 /* NIDropDown.m in Sources */,
+				FCFF903919FF676200420EAD /* NSArray+PureLayout.m in Sources */,
 				04D0258119FDE0D5002316DF /* ViewController.m in Sources */,
 				041C43B518F63D5E00391E69 /* TLServiceController.m in Sources */,
 				041C43AC18F63D5E00391E69 /* TLPhotoExistViewController.m in Sources */,
 				0464348818FA63DF0005CBD4 /* TLShowImageViewController.m in Sources */,
 				0417E57B18FBB1BC00251B00 /* TLRecommanderViewController.m in Sources */,
 				041C43AF18F63D5E00391E69 /* TLRCell.m in Sources */,
+				FCFF903319FF676200420EAD /* CNPPopupController.m in Sources */,
 				041C43A418F63D5E00391E69 /* TLHelp.m in Sources */,
 				041C43A318F63D5E00391E69 /* TLDetailViewController.m in Sources */,
 				04B4C90A19F8990800F1A0A0 /* TSPopoverPopoverView.m in Sources */,
@@ -2710,6 +3144,7 @@
 				041C437718F63D5E00391E69 /* ASIHTTPRequest.m in Sources */,
 				041C424418F63B5600391E69 /* TLAppDelegate.m in Sources */,
 				041C439E18F63D5E00391E69 /* TLCell.m in Sources */,
+				FCFF903719FF676200420EAD /* README.md in Sources */,
 				041C424018F63B5600391E69 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2876,6 +3311,7 @@
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/商机转介",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2929,6 +3365,7 @@
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/商机转介/Lib/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/商机转介",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

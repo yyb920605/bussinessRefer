@@ -122,6 +122,20 @@
     
     
 }
+//通往百度地图
+-(IBAction)faxian:(id)sender{
+    UIStoryboard *storyboard=nil;
+    if (iPhone5) {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil ];
+    }
+    else{
+        storyboard = [UIStoryboard storyboardWithName:@"IPhone4MainStoryboard" bundle:nil ];
+    }
+    TLReaderViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
+    [self.navigationController pushViewController:viewController animated:YES];
+
+
+}
 
 -(IBAction)commender:(id)sender{
     
@@ -253,6 +267,9 @@
 -(IBAction)iwant:(id)sender{
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"功能尚未开通" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [alert show];
+}
+
+- (IBAction)faqian:(id)sender {
 }
 -(void)GetResult2:(ASIHTTPRequest *)request{
     //接受字符串集

@@ -31,6 +31,7 @@
 @property IBOutlet UIButton *fengxiangbj;
 @property IBOutlet UIButton *tuijianren;
 @property IBOutlet UIButton *tuijianrenbj;
+@property (strong, nonatomic) IBOutlet UIButton *faxian;
 
 -(IBAction)faqi:(id)sender;
 -(IBAction)tongji:(id)sender;
@@ -38,6 +39,7 @@
 -(IBAction)myShare:(id)sender;
 -(IBAction)benefit:(id)sender;
 -(IBAction)iwant:(id)sender;
+- (IBAction)faxian:(id)sender;
 
 
 @end

@@ -11,6 +11,7 @@
 #import "Reachability.h"
 #import "WXApi.h"
 #import <ShareSDK/ShareSDK.h>
+#import "BMapKit.h"
 //#import "TLLoginViewController.h"
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -22,7 +23,7 @@
     NSString *loginName;
     NSString *URL;
 }
-
+@property (strong, nonatomic) BMKMapManager* mapManager;
 @property (strong, nonatomic) Reachability *hostReach;
 @property Boolean isReachable;
 @property NSInteger flag;

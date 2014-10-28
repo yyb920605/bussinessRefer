@@ -10,14 +10,14 @@
 	<string>商机转介</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>949C135100A5B334B028490D288A21C23B703792</key>
+		<key>0B61EAD49CEC214EF79856983D77D9493FD3FDC1</key>
 		<string>https://github.com/yyb920605/bussiness.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>商机转介.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>949C135100A5B334B028490D288A21C23B703792</key>
+		<key>0B61EAD49CEC214EF79856983D77D9493FD3FDC1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>949C135100A5B334B028490D288A21C23B703792</string>
+	<string>0B61EAD49CEC214EF79856983D77D9493FD3FDC1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>949C135100A5B334B028490D288A21C23B703792</string>
+			<string>0B61EAD49CEC214EF79856983D77D9493FD3FDC1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>%E5%95%86%E6%9C%BA%E8%BD%AC%E4%BB%8B%E6%9C%80%E6%96%B0</string>
 		</dict>

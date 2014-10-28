@@ -8,11 +8,4 @@
 
 #import <Foundation/Foundation.h>
 int a;
-double b;
-int aaaaaddddd;
-int c;
-
-int aaaaaaaaaaaa;
-
-int ddddd;
 
