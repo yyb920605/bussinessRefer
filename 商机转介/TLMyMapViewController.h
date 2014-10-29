@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
 #import "CNPPopupController.h"
+
 @class Position;
 @interface TLMyMapViewController : UIViewController
 @property (strong,nonatomic)IBOutlet BMKMapView* mapView;
@@ -16,10 +17,12 @@
 @property (assign,nonatomic) CLLocationCoordinate2D currentSelectCoordinate;
 @property (assign,nonatomic)BOOL isSetMapSpan;
 
-//popView
 
-- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate;
--(IBAction)setAnnotation:(id)sender;
-- (void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos;
+-(void)setAnnotation:(NSMutableArray *)muarray;//添加标注 muarray存获取的公司信息集合
+- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate;//定位后，将地图移动到定位点并设立显示范围大小
+
+-(void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos;//设立弹出地图的样式和地点
+- (IBAction)chaxun;//相应查询按钮的点击
+-(void)getSearchedPositions:(NSString *)trade andDistance:(NSString *)distance;//根据行业和范围查找商户的列表
 @end
 

@@ -1,4 +1,4 @@
-//
+ //
 //  TLHomeViewController.m
 //  商机转介
 //
@@ -131,14 +131,13 @@
     else{
         storyboard = [UIStoryboard storyboardWithName:@"IPhone4MainStoryboard" bundle:nil ];
     }
-    UIViewController *viewController;
-    if(!viewController){
-     viewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
+    if(!_myMapViewController){
+     _myMapViewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
     
     }
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.navigationController pushViewController:_myMapViewController animated:YES];
 
-
+ 
 }
 
 -(IBAction)commender:(id)sender{
@@ -273,8 +272,6 @@
     [alert show];
 }
 
-- (IBAction)faqian:(id)sender {
-}
 -(void)GetResult2:(ASIHTTPRequest *)request{
     //接受字符串集
     [tooles removeHUD];

@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Position : NSObject
-@property (retain,nonatomic) NSString *tit;
-@property (assign,nonatomic) double latit;
-@property (assign,nonatomic) double longit;
-//@property (retain,nonatomic) NSString *companyName;
--(id)initWithTitle:(NSString *)tit andLatit:(double)la andLongit:(double)lg;
+@property (retain,nonatomic) NSString *branchId;//分店id
+@property (retain,nonatomic) NSString *companyName;//分店名字
+@property (assign,nonatomic) double latit;//分店纬度
+@property (assign,nonatomic) double longit;//分店经度
+@property (retain,nonatomic) NSString *companyDescription;//分店描述
+@property (retain,nonatomic) NSString *companyContact;//分店联系
+@property (retain,nonatomic) NSString *companyPhone;//分店电话
+@property (retain,nonatomic) NSString *companyImage;//分店图片
+
+-(id)initWithBranchId:(NSString *)bi andLatit:(double)la andLongit:(double)lg
+andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn;
 @end

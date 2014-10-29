@@ -9,6 +9,10 @@
 #import "TLMyMapViewController.h"
 #import "position.h"
 #import "MyPositionAnnotation.h"
+#import "TLAppDelegate.h"
+#import "tooles.h"
+#import "ASIFormDataRequest.h"
+#import "Position.h"
 
 @implementation TLMyMapViewController
 - (instancetype)init
@@ -26,22 +30,25 @@
     _mapView.showsUserLocation = NO;//先关闭显示的定位图层
     _mapView.userTrackingMode = BMKUserTrackingModeFollow;//设置跟随的状态
     _mapView.showsUserLocation = YES;//显示定位图层
+    BMKUserLocation *userLocation=[_locService userLocation];
+    [self setMapRegionWithCoordinate:userLocation.location.coordinate];
     
     
-}
-- (IBAction)set:(id)sender {
 }
 
--(void)setAnnotation:(id)sender{
-    Position *po1=[[Position alloc]initWithTitle:@"测试一" andLatit:34.7502450000 andLongit:113.6587530000];
-    Position *po2=[[Position alloc]initWithTitle:@"测试二" andLatit:34.7265140000 andLongit:113.7229280000];
-    Position *po3=[[Position alloc]initWithTitle:@"测试3" andLatit:34.7102450000 andLongit:113.6787530000];
-    NSMutableArray *muarray=[[NSMutableArray alloc]init];
+-(IBAction)chaxun{
+    [self getSearchedPositions:<#(NSString *)#> andDistance:<#(NSString *)#>];
+
+}
+-(void)setAnnotation:(NSMutableArray *)muarray{
+//    Position *po1=[[Position alloc]initWithTitle:@"测试一" andLatit:34.7502450000 andLongit:113.6587530000];
+//    Position *po2=[[Position alloc]initWithTitle:@"测试二" andLatit:34.7265140000 andLongit:113.7229280000];
+//    Position *po3=[[Position alloc]initWithTitle:@"测试3" andLatit:34.7102450000 andLongit:113.6787530000];
     
-    [muarray addObject:po1];
-    [muarray addObject:po2];
-    [muarray addObject:po3];
-    
+//    [muarray addObject:po1];
+//    [muarray addObject:po2];
+//    [muarray addObject:po3];
+//    
     
     for (int i=0;i<[muarray count];i++ ) {
         MyPositionAnnotation* annotation = [[MyPositionAnnotation alloc]initWithPosition:
@@ -50,9 +57,53 @@
         
         [_mapView addAnnotation:annotation];
     };
-    
-    
 }
+-(void)getSearchedPositions:(NSString *)trade andDistance:(NSString *)distance{
+    [tooles showHUD:@"正在查询，请稍后。。。"];
+    TLAppDelegate *myDelegate=[[UIApplication sharedApplication]delegate];
+    NSString *urlstr=[NSString stringWithFormat:@"%@/%@",myDelegate.URL,@"getBranchs"];
+    NSURL *myurl=[NSURL URLWithString:urlstr];
+    ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:myurl];
+    [request setPostValue:@"IOS" forKey:@"phoneType"];
+    [request setPostValue:@"trade" forKey:trade];
+    [request setPostValue:@"distance" forKey:distance];
+    //[request setPostValue:@"orgid" forKey:orgid];
+    [request setDelegate:self];
+    [request setDidFinishSelector:@selector(GetResult:)];
+    [request setDidFailSelector:@selector(GetErr:)];
+    [request startAsynchronous];
+    
+
+};
+- (void)GetErr:(ASIHTTPRequest *)request{
+    
+    [tooles removeHUD];
+    
+    [tooles MsgBox:@"网络错误,连接不到服务器"];
+}
+-(void)GetResult:(ASIHTTPRequest *)request{
+    [tooles removeHUD];
+    NSError *error;
+    NSString *str=[request responseString];
+    [str UTF8String];
+    NSData *data=[str dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *all=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    NSString *result=[all objectForKey:@"result"];
+    if([result isEqualToString:@"success"]){
+        NSDictionary *positionsJson=[all objectForKey:@"branchs"];
+        NSMutableArray *positions=[[NSMutableArray alloc]init];
+        for(int i=0;i<[positionsJson count];i++){
+            Position *postion=[[Position alloc]initWithBranchId:[positionsJson objectForKey:@"branchId"] andLatit:[[positionsJson objectForKey:@"latitude"] doubleValue] andLongit:[[positionsJson objectForKey:@"longitude"] doubleValue] andCompanyDescription:[positionsJson objectForKey:@"description"] andCompanyContact:@"contact" andCompanyPhone:@"phone" andCompanyImage:@"image" andCompanyName:@"name"];
+            [positions addObject:postion];
+        }
+        [self setAnnotation:positions];//在地图上插入大头针
+    }else{
+        [tooles MsgBox:@"查询错误"];
+    }
+
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -150,7 +201,7 @@
     NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     paragraphStyle.alignment = NSTextAlignmentCenter;
-    NSString *t=pos.tit;
+    NSString *t=pos.companyName;
     NSString *a=[NSString stringWithFormat:@"%f",pos.latit];
     NSString *d=[NSString stringWithFormat:@"%f",pos.longit];
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:t attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:24], NSParagraphStyleAttributeName : paragraphStyle}];
@@ -167,6 +218,9 @@
     popupController.theme.dismissesOppositeDirection = YES;
     popupController.delegate = self;
     [popupController presentPopupControllerAnimated:YES];
+}
+
+- (IBAction)chaxun {
 }
 
 //传入经纬度,将baiduMapView 锁定到以当前经纬度为中心点的显示区域和合适的显示范围

@@ -805,7 +805,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setAnnotation:" destination="Eqe-j1-SJf" eventType="touchUpInside" id="IUL-fh-fBR"/>
+                                    <action selector="chaxun" destination="Eqe-j1-SJf" eventType="touchUpInside" id="e5s-yY-cl6"/>
                                 </connections>
                             </button>
                         </subviews>

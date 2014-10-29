@@ -17,7 +17,7 @@
 }
 -(void)addContent{
     if(_position){
-        self.title=_position.tit;
+        self.title=_position.companyName;
         CLLocationCoordinate2D coor;
         coor.latitude = _position.latit;
         coor.longitude =_position.longit;

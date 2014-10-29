@@ -1998,7 +1998,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="p0q-um-n0a" customClass="BMKMapView">
-                                <rect key="frame" x="59" y="167" width="224" height="401"/>
+                                <rect key="frame" x="0.0" y="167" width="320" height="401"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -2009,7 +2009,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setAnnotation:" destination="vWD-Ss-TKk" eventType="touchUpInside" id="MAp-9S-H6S"/>
+                                    <action selector="chaxun" destination="vWD-Ss-TKk" eventType="touchUpInside" id="UFQ-8O-TXi"/>
                                 </connections>
                             </button>
                         </subviews>

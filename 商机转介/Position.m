@@ -9,12 +9,17 @@
 #import "Position.h"
 
 @implementation Position
--(id)initWithTitle:(NSString *)tit andLatit:(double)la andLongit:(double)lg{
+-(id)initWithBranchId:(NSString *)bi andLatit:(double)la andLongit:(double)lg andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn{
     
     self=[super init];
-    self.tit=tit;
+    self.companyName=cn;
     self.latit=la;
     self.longit=lg;
+    self.branchId=bi;
+    self.companyDescription=cd;
+    self.companyContact=cc;
+    self.companyPhone=cp;
+    self.companyImage=ci;
     return self;
 
 }
