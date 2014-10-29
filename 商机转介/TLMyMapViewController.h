@@ -14,6 +14,9 @@
 @interface TLMyMapViewController : UIViewController
 @property (strong,nonatomic)IBOutlet BMKMapView* mapView;
 @property (strong,nonatomic)BMKLocationService* locService;
+@property (retain,nonatomic)NSString* trade;
+@property (retain,nonatomic)NSString* distance;
+@property (retain,nonatomic)NSArray* menuArray;
 @property (assign,nonatomic) CLLocationCoordinate2D currentSelectCoordinate;
 @property (assign,nonatomic)BOOL isSetMapSpan;
 
@@ -22,7 +25,7 @@
 - (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate;//定位后，将地图移动到定位点并设立显示范围大小
 
 -(void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos;//设立弹出地图的样式和地点
-- (IBAction)chaxun;//相应查询按钮的点击
+
 -(void)getSearchedPositions:(NSString *)trade andDistance:(NSString *)distance;//根据行业和范围查找商户的列表
 @end
 

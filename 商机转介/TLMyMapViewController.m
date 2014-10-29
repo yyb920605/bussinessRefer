@@ -13,6 +13,7 @@
 #import "tooles.h"
 #import "ASIFormDataRequest.h"
 #import "Position.h"
+#import "MXPullDownMenu.h"
 
 @implementation TLMyMapViewController
 - (instancetype)init
@@ -30,16 +31,48 @@
     _mapView.showsUserLocation = NO;//先关闭显示的定位图层
     _mapView.userTrackingMode = BMKUserTrackingModeFollow;//设置跟随的状态
     _mapView.showsUserLocation = YES;//显示定位图层
+
     BMKUserLocation *userLocation=[_locService userLocation];
     [self setMapRegionWithCoordinate:userLocation.location.coordinate];
+    //初始化下拉菜单
+    _distance=@"0";//初始化为0表示所有
+    _trade=@"全行业";
     
+    _menuArray = @[ @[@"选择行业",@"全行业",@"计算机",@"金融"], @[@"选择距离", @"全距离", @"500米",@"1000米",@"5000米"] ];
+    MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:_menuArray selectedColor:[UIColor greenColor]];
+    menu.delegate = self;
+    menu.frame = CGRectMake(0, 60, menu.frame.size.width, menu.frame.size.height);
+    [self.view addSubview:menu];
+
     
 }
-
--(IBAction)chaxun{
-    [self getSearchedPositions:<#(NSString *)#> andDistance:<#(NSString *)#>];
-
+//下拉菜单点击代理
+- (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row{
+    if(column==0){
+        NSString *str1=[[NSString alloc]initWithString:_menuArray[column][row]];
+        if([str1 isEqualToString:@"选择行业"]){
+            _trade=@"全行业";
+        }else
+        {
+            _trade=str1;
+        }
+    }else
+    {
+        NSMutableString *str2=[[NSMutableString alloc]initWithString:_menuArray[column][row]];
+        if([str2 isEqualToString:@"选择距离"]||[str2 isEqualToString:@"全距离"]){
+            _distance=@"0";
+        }else
+        {
+            
+            NSRange subStr=[str2 rangeOfString:@"米"];
+            [str2 deleteCharactersInRange:subStr];
+            _distance=str2;
+        }
+    
+    }
+    [self getSearchedPositions:_trade andDistance:_distance];
 }
+
 -(void)setAnnotation:(NSMutableArray *)muarray{
 //    Position *po1=[[Position alloc]initWithTitle:@"测试一" andLatit:34.7502450000 andLongit:113.6587530000];
 //    Position *po2=[[Position alloc]initWithTitle:@"测试二" andLatit:34.7265140000 andLongit:113.7229280000];
@@ -60,14 +93,21 @@
 }
 -(void)getSearchedPositions:(NSString *)trade andDistance:(NSString *)distance{
     [tooles showHUD:@"正在查询，请稍后。。。"];
-    TLAppDelegate *myDelegate=[[UIApplication sharedApplication]delegate];
-    NSString *urlstr=[NSString stringWithFormat:@"%@/%@",myDelegate.URL,@"getBranchs"];
+   
+//    TLAppDelegate *myDelegate=[[UIApplication sharedApplication]delegate];
+    NSString *urlstr=[NSString stringWithFormat:@"%@/%@",@"http://192.168.2.3:8080",@"control/json/discountgetBranchs"];
     NSURL *myurl=[NSURL URLWithString:urlstr];
     ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:myurl];
-    [request setPostValue:@"IOS" forKey:@"phoneType"];
-    [request setPostValue:@"trade" forKey:trade];
-    [request setPostValue:@"distance" forKey:distance];
-    //[request setPostValue:@"orgid" forKey:orgid];
+    if(![trade isEqualToString:@"全行业"]){
+        [request setPostValue:trade forKey:@"trade"];
+    }
+    BMKUserLocation *userLocation=[_locService userLocation];
+    [request setPostValue:distance forKey:@"distance"];
+    NSString* longitude=[NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude];
+    NSString* latitude=[NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude];
+    [request setPostValue:latitude forKey:@"latitude"];
+    //[request setPostValue:@"orgid" forKey:@""];
+    [request setPostValue:longitude forKey:@"longitude"];
     [request setDelegate:self];
     [request setDidFinishSelector:@selector(GetResult:)];
     [request setDidFailSelector:@selector(GetErr:)];
@@ -87,13 +127,13 @@
     NSString *str=[request responseString];
     [str UTF8String];
     NSData *data=[str dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *all=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-    NSString *result=[all objectForKey:@"result"];
+    NSDictionary *all= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];NSString *result=[all objectForKey:@"result"];
     if([result isEqualToString:@"success"]){
-        NSDictionary *positionsJson=[all objectForKey:@"branchs"];
+        NSArray *positionsJson=[all objectForKey:@"branchs"];
         NSMutableArray *positions=[[NSMutableArray alloc]init];
         for(int i=0;i<[positionsJson count];i++){
-            Position *postion=[[Position alloc]initWithBranchId:[positionsJson objectForKey:@"branchId"] andLatit:[[positionsJson objectForKey:@"latitude"] doubleValue] andLongit:[[positionsJson objectForKey:@"longitude"] doubleValue] andCompanyDescription:[positionsJson objectForKey:@"description"] andCompanyContact:@"contact" andCompanyPhone:@"phone" andCompanyImage:@"image" andCompanyName:@"name"];
+            NSDictionary *po=[positionsJson objectAtIndex:i];
+            Position *postion=[[Position alloc]initWithBranchId:[po objectForKey:@"branchId"] andLatit:[[po objectForKey:@"latitude"] doubleValue] andLongit:[[po objectForKey:@"longitude"] doubleValue] andCompanyDescription:[po objectForKey:@"description"] andCompanyContact:[po objectForKey:@"contact"] andCompanyPhone:[po objectForKey:@"phone"] andCompanyImage:[po objectForKey:@"image"] andCompanyName:[po objectForKey:@"name"]];
             [positions addObject:postion];
         }
         [self setAnnotation:positions];//在地图上插入大头针
@@ -160,7 +200,7 @@
     //        NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     //    }
     [self setMapRegionWithCoordinate:userLocation.location.coordinate];
-    NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+//    NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     
     [_mapView updateLocationData:userLocation];
 }
@@ -220,8 +260,7 @@
     [popupController presentPopupControllerAnimated:YES];
 }
 
-- (IBAction)chaxun {
-}
+
 
 //传入经纬度,将baiduMapView 锁定到以当前经纬度为中心点的显示区域和合适的显示范围
 - (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate
