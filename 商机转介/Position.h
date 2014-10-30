@@ -17,7 +17,8 @@
 @property (retain,nonatomic) NSString *companyContact;//分店联系
 @property (retain,nonatomic) NSString *companyPhone;//分店电话
 @property (retain,nonatomic) NSString *companyImage;//分店图片
+@property (retain,nonatomic) NSString *companyAddress;//分店地址
 
 -(id)initWithBranchId:(NSString *)bi andLatit:(double)la andLongit:(double)lg
-andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn;
+andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn andCompanyAddress:(NSString *)ca;
 @end

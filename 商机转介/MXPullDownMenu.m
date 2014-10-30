@@ -24,7 +24,7 @@
     NSMutableArray *_titles;
     NSMutableArray *_indicators;
     
-    
+    NSArray *_giveTitles;
     NSInteger _currentSelectedMenudIndex;
     bool _show;
     
@@ -32,12 +32,14 @@
     
     NSArray *_array;
     
+    bool _change;
+    
 }
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    
+    _change=NO;
     if (self) {
         
     
@@ -45,7 +47,7 @@
     return self;
 }
 
-- (MXPullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)color
+- (MXPullDownMenu *)initWithArray:(NSMutableArray *)array selectedColor:(UIColor *)color titles:(NSArray *)ti;
 {
     self = [super init];
     if (self) {
@@ -55,7 +57,7 @@
         _menuColor = [UIColor colorWithRed:164.0/255.0 green:166.0/255.0 blue:169.0/255.0 alpha:1.0];
         
         _array = array;
-
+        _giveTitles=ti;
         _numOfMenu = _array.count;
         
         CGFloat textLayerInterval = self.frame.size.width / ( _numOfMenu * 2);
@@ -67,7 +69,7 @@
         for (int i = 0; i < _numOfMenu; i++) {
             
             CGPoint position = CGPointMake( (i * 2 + 1) * textLayerInterval , self.frame.size.height / 2);
-            CATextLayer *title = [self creatTextLayerWithNSString:_array[i][0] withColor:_menuColor andPosition:position];
+            CATextLayer *title = [self creatTextLayerWithNSString:_giveTitles[i] withColor:_menuColor andPosition:position];
             [self.layer addSublayer:title];
             [_titles addObject:title];
             
@@ -116,7 +118,16 @@
 - (void)tapMenu:(UITapGestureRecognizer *)paramSender
 {
     CGPoint touchPoint = [paramSender locationInView:self];
-    
+    if(!_change){
+        
+//        NSMutableArray *ar1=[_array objectAtIndex:0];
+//        [ar1 removeObject:@"选择行业"];
+//        ar1=[_array objectAtIndex:1];
+//        [ar1 removeObject:@"选择范围"];
+        //[[_array objectAtIndex:0] removeObjectAtIndex:0];
+        //[[_array objectAtIndex:1] removeObjectAtIndex:0];
+        _change=YES;
+    }
     // 得到tapIndex
     
     NSInteger tapIndex = touchPoint.x / (self.frame.size.width / _numOfMenu);

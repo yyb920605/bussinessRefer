@@ -9,7 +9,7 @@
 #import "Position.h"
 
 @implementation Position
--(id)initWithBranchId:(NSString *)bi andLatit:(double)la andLongit:(double)lg andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn{
+-(id)initWithBranchId:(NSString *)bi andLatit:(double)la andLongit:(double)lg andCompanyDescription:(NSString *)cd andCompanyContact:(NSString *)cc andCompanyPhone:(NSString *)cp andCompanyImage:(NSString *)ci andCompanyName:(NSString *)cn andCompanyAddress:(NSString *)ca{
     
     self=[super init];
     self.companyName=cn;
@@ -20,6 +20,7 @@
     self.companyContact=cc;
     self.companyPhone=cp;
     self.companyImage=ci;
+    self.companyAddress=ca;
     return self;
 
 }
