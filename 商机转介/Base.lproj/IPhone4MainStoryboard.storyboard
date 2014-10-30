@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2QS-fx-Pau">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -785,7 +786,7 @@
             </objects>
             <point key="canvasLocation" x="-1090" y="-2089"/>
         </scene>
-        <!--Title-->
+        <!--My Map View Controller-->
         <scene sceneID="5XY-nz-UXb">
             <objects>
                 <viewController storyboardIdentifier="faxian" id="Eqe-j1-SJf" customClass="TLMyMapViewController" sceneMemberID="viewController">
@@ -801,7 +802,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Sec-ac-uRC" userLabel="发现周围"/>
                     <connections>
                         <outlet property="mapView" destination="oKF-nl-b8U" id="Jyf-Iw-muB"/>
                     </connections>

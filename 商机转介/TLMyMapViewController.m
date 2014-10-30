@@ -107,7 +107,11 @@
     NSURL *myurl=[NSURL URLWithString:urlstr];
     ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:myurl];
     if(![trade isEqualToString:@"全行业"]){
-        [request setPostValue:trade forKey:@"trade"];
+        if([trade isEqualToString:@"计算机"]){
+            [request setPostValue:@"IT" forKey:@"trade"];
+        }else if ([trade isEqualToString:@"金融"]){
+            [request setPostValue:@"FINANCE" forKey:@"trade"];
+        }
     }
     BMKUserLocation *userLocation=[_locService userLocation];
     [request setPostValue:distance forKey:@"distance"];
