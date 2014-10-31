@@ -17,6 +17,7 @@
 @property (retain,nonatomic)NSString* trade;
 @property (retain,nonatomic)NSString* distance;
 @property (retain,nonatomic)NSArray* menuArray;
+- (IBAction)setLocation:(id)sender;
 @property (assign,nonatomic) CLLocationCoordinate2D currentSelectCoordinate;
 @property (assign,nonatomic)BOOL isSetMapSpan;
 

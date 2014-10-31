@@ -248,7 +248,12 @@
         [self showPopupWithStyle:CNPPopupStyleCentered andPosition:pa.position];
     }
 }
+-(IBAction)setLocation:(id)sender{
+    _isSetMapSpan=NO;
+    BMKUserLocation *userLocation=[_locService userLocation];
+    [self setMapRegionWithCoordinate:userLocation.location.coordinate];
 
+}
 
 - (void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos {
     
@@ -329,4 +334,5 @@
 //        }
 //    }];
 //}
+
 @end
