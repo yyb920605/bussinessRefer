@@ -17,13 +17,13 @@
 @property (retain,nonatomic)NSString* trade;
 @property (retain,nonatomic)NSString* distance;
 @property (retain,nonatomic)NSArray* menuArray;
-- (IBAction)setLocation:(id)sender;
+
 @property (assign,nonatomic) CLLocationCoordinate2D currentSelectCoordinate;
 @property (assign,nonatomic)BOOL isSetMapSpan;
 
 
 -(void)setAnnotation:(NSMutableArray *)muarray;//添加标注 muarray存获取的公司信息集合
-- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate;//定位后，将地图移动到定位点并设立显示范围大小
+- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate andSpan:(BMKCoordinateSpan)span;//定位后，将地图移动到定位点并设立显示范围大小
 
 -(void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos;//设立弹出地图的样式和地点
 

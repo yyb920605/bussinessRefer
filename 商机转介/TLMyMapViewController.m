@@ -16,6 +16,7 @@
 #import "MXPullDownMenu.h"
 
 @implementation TLMyMapViewController
+
 - (instancetype)init
 {
     self = [super init];
@@ -31,9 +32,11 @@
     _mapView.showsUserLocation = NO;//先关闭显示的定位图层
     _mapView.userTrackingMode = BMKUserTrackingModeFollow;//设置跟随的状态
     _mapView.showsUserLocation = YES;//显示定位图层
+
     
     BMKUserLocation *userLocation=[_locService userLocation];
-    [self setMapRegionWithCoordinate:userLocation.location.coordinate];
+    BMKCoordinateSpan span=BMKCoordinateSpanMake(0.6, 0.6);
+    [self setMapRegionWithCoordinate:userLocation.location.coordinate andSpan:span];
     //初始化下拉菜单
     _distance=@"0";//初始化为0表示所有
     _trade=@"全行业";
@@ -48,6 +51,7 @@
 }
 //下拉菜单点击代理
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row{
+
     if(column==0){
         NSString *str1=[[NSString alloc]initWithString:_menuArray[column][row]];
         if([str1 isEqualToString:@"选择行业"]){
@@ -55,12 +59,15 @@
         }else
         {
             _trade=str1;
+            
         }
     }else
     {
         NSMutableString *str2=[[NSMutableString alloc]initWithString:_menuArray[column][row]];
         if([str2 isEqualToString:@"选择范围"]||[str2 isEqualToString:@"全距离"]){
             _distance=@"0";
+           
+
         }else
         {
             
@@ -88,6 +95,23 @@
 //    [arr2 addObject:@"4"];
 //    NSMutableArray *arr3=arr2;
 //    [arr3 removeObjectAtIndex:1];
+    _isSetMapSpan=NO;
+    BMKCoordinateSpan span;
+    if([_distance isEqualToString:@"0"]){
+        span=BMKCoordinateSpanMake(0.6, 0.6);
+        
+    }else if([_distance isEqualToString:@"500"]){
+        span=BMKCoordinateSpanMake(0.02, 0.02);
+    
+    }else if([_distance isEqualToString:@"1000"]){
+        span=BMKCoordinateSpanMake(0.04, 0.04);
+        
+    }else if([_distance isEqualToString:@"5000"]){
+        span=BMKCoordinateSpanMake(0.2, 0.2);
+        
+    }
+    BMKUserLocation *userLocation=[_locService userLocation];
+    [self setMapRegionWithCoordinate:userLocation.location.coordinate andSpan:span];
     
     NSArray *arr=[[NSArray alloc]initWithArray:_mapView.annotations];
     [_mapView removeAnnotations:arr];
@@ -165,7 +189,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [_mapView viewWillAppear];
+
 
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
     _locService.delegate = self;
@@ -213,8 +237,8 @@
     //        _mapView.region = region;
     //        NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     //    }
-    [self setMapRegionWithCoordinate:userLocation.location.coordinate];
-//    NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    //[self setMapRegionWithCoordinate:userLocation.location.coordinate];
+    NSLog(@"当前的坐标是: %f,%f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     
     [_mapView updateLocationData:userLocation];
 }
@@ -248,12 +272,7 @@
         [self showPopupWithStyle:CNPPopupStyleCentered andPosition:pa.position];
     }
 }
--(IBAction)setLocation:(id)sender{
-    _isSetMapSpan=NO;
-    BMKUserLocation *userLocation=[_locService userLocation];
-    [self setMapRegionWithCoordinate:userLocation.location.coordinate];
 
-}
 
 - (void)showPopupWithStyle:(CNPPopupStyle)popupStyle andPosition:(Position *)pos {
     
@@ -307,13 +326,13 @@
 
 
 //传入经纬度,将baiduMapView 锁定到以当前经纬度为中心点的显示区域和合适的显示范围
-- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate
+- (void)setMapRegionWithCoordinate:(CLLocationCoordinate2D)coordinate andSpan:(BMKCoordinateSpan)span;
 {
     //bool _isSetMapSpan=NO;
     BMKCoordinateRegion region;
     if (!_isSetMapSpan)//这里用一个变量判断一下,只在第一次锁定显示区域时 设置一下显示范围 Map Region
     {
-        region = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(0.05, 0.05));//越小地图显示越详细
+        region = BMKCoordinateRegionMake(coordinate, span);//越小地图显示越详细
         _isSetMapSpan = YES;
         [_mapView setRegion:region animated:YES];//执行设定显示范围
         _currentSelectCoordinate = coordinate;
