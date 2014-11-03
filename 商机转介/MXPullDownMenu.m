@@ -52,7 +52,7 @@
     self = [super init];
     if (self) {
         
-        self.frame = CGRectMake(0, 0, 320, 36);
+        self.frame = CGRectMake(0, 0, 320, 42);
         
         _menuColor = [UIColor colorWithRed:164.0/255.0 green:166.0/255.0 blue:169.0/255.0 alpha:1.0];
         

@@ -336,7 +336,7 @@
         _isSetMapSpan = YES;
         [_mapView setRegion:region animated:YES];//执行设定显示范围
         _currentSelectCoordinate = coordinate;
-        [_mapView setCenterCoordinate:coordinate animated:YES];//根据提供的经纬度为中心原点 以动画的形式移动到该区域
+        //[_mapView setCenterCoordinate:coordinate animated:YES];//根据提供的经纬度为中心原点 以动画的形式移动到该区域
     }
     
 }

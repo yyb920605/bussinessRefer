@@ -456,6 +456,8 @@
 		04FE8881192B74C5002A8805 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = 041C423F18F63B5600391E69 /* main.m */; };
 		04FE8882192B74C5002A8805 /* 商机转介-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 041C424118F63B5600391E69 /* 商机转介-Prefix.pch */; };
 		FC33C98B1A00C6AF00962D5B /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33C98A1A00C6AF00962D5B /* MXPullDownMenu.m */; };
+		FC48C4D31A073198008B301B /* TLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48C4D21A073198008B301B /* TLTabBarController.m */; };
+		FC48C4D71A0751BE008B301B /* location1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC48C4D61A0751BE008B301B /* location1.png */; };
 		FCFF8FF319FF30F000420EAD /* TLCompile.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCFF8FF219FF30F000420EAD /* TLCompile.mm */; };
 		FCFF8FF619FF66C600420EAD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF8FF519FF66C600420EAD /* Security.framework */; };
 		FCFF8FF819FF66EF00420EAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF8FF719FF66EF00420EAD /* CoreLocation.framework */; };
@@ -1097,6 +1099,9 @@
 		04FBD40D19502C2E004355B0 /* welcome45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome45.png; sourceTree = "<group>"; };
 		FC33C9891A00C6AF00962D5B /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
 		FC33C98A1A00C6AF00962D5B /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
+		FC48C4D11A073198008B301B /* TLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLTabBarController.h; path = ../TLTabBarController.h; sourceTree = "<group>"; };
+		FC48C4D21A073198008B301B /* TLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLTabBarController.m; path = ../TLTabBarController.m; sourceTree = "<group>"; };
+		FC48C4D61A0751BE008B301B /* location1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location1.png; sourceTree = "<group>"; };
 		FCFF8FF219FF30F000420EAD /* TLCompile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TLCompile.mm; sourceTree = "<group>"; };
 		FCFF8FF519FF66C600420EAD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FCFF8FF719FF66EF00420EAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -1335,6 +1340,7 @@
 		040D956319D1412C0055FA3D /* 2.0图标 */ = {
 			isa = PBXGroup;
 			children = (
+				FC48C4D61A0751BE008B301B /* location1.png */,
 				04C7399C19EF913300A2A202 /* neww */,
 				0445B01D19E8BE44007B3E22 /* new */,
 				0445B00A19E7CD8E007B3E22 /* 1111 */,
@@ -1474,6 +1480,8 @@
 		041C423918F63B5600391E69 /* 商机转介 */ = {
 			isa = PBXGroup;
 			children = (
+				FC48C4D11A073198008B301B /* TLTabBarController.h */,
+				FC48C4D21A073198008B301B /* TLTabBarController.m */,
 				FCFF8FF119FF30CE00420EAD /* myMap */,
 				0419CFE419B9524D000CB0B9 /* chart */,
 				0464348918FA65380005CBD4 /* opportunity */,
@@ -2845,6 +2853,7 @@
 				040D957B19D164670055FA3D /* 分享.png in Resources */,
 				04B92B7519EE483F00669C37 /* 分享1111.png in Resources */,
 				04F11AAC1918876E002356A8 /* 调度审核列表.png in Resources */,
+				FC48C4D71A0751BE008B301B /* location1.png in Resources */,
 				042969FA19D5443400031748 /* 完成.png in Resources */,
 				041C438718F63D5E00391E69 /* Default.png in Resources */,
 				043BEB731908F09400BEF5C1 /* 银行卡变更.jpg in Resources */,
@@ -3081,6 +3090,7 @@
 				041C43B618F63D5E00391E69 /* TLTcell.m in Sources */,
 				FCFF8FF319FF30F000420EAD /* TLCompile.mm in Sources */,
 				0429EF8B191A10CA001B8E78 /* TLChangePswViewController.m in Sources */,
+				FC48C4D31A073198008B301B /* TLTabBarController.m in Sources */,
 				04B4C90919F8990800F1A0A0 /* TSPopoverController.m in Sources */,
 				04F1CCB21907A0E400E90921 /* TLRecommanderManagementViewController.m in Sources */,
 				FCFF908E19FF68C600420EAD /* TLMyMapViewController.m in Sources */,

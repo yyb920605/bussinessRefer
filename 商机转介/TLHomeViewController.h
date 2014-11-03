@@ -19,7 +19,7 @@
 #import "TLChanceListViewController.h"
 #import "TLBenefitTableViewController.h"
 #import "TLBenifitViewController.h"
-#import "TLMyMapViewController.h"
+
 
 @interface TLHomeViewController : UIViewController<SGFocusImageFrameDelegate>
 
@@ -28,12 +28,13 @@
 @property IBOutlet UIButton *faqibj;
 @property IBOutlet UIButton *tongji;
 @property IBOutlet UIButton *tongjibj;
+
 @property IBOutlet UIButton *fenxiang;
 @property IBOutlet UIButton *fengxiangbj;
 @property IBOutlet UIButton *tuijianren;
 @property IBOutlet UIButton *tuijianrenbj;
-@property (strong, nonatomic) IBOutlet UIButton *faxian;
-@property (strong,nonatomic) TLMyMapViewController *myMapViewController;
+
+
 
 -(IBAction)faqi:(id)sender;
 -(IBAction)tongji:(id)sender;
@@ -41,7 +42,7 @@
 -(IBAction)myShare:(id)sender;
 -(IBAction)benefit:(id)sender;
 -(IBAction)iwant:(id)sender;
-- (IBAction)faxian:(id)sender;
+
 
 
 @end

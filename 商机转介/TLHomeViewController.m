@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //添加一个UIbarButtonItem
+
+    
+    
     self.tongji.adjustsImageWhenHighlighted = NO;
     self.faqi.adjustsImageWhenHighlighted = NO;
     self.tuijianren.adjustsImageWhenHighlighted = NO;
@@ -122,23 +126,23 @@
     
     
 }
-//通往百度地图
--(IBAction)faxian:(id)sender{
-    UIStoryboard *storyboard=nil;
-    if (iPhone5) {
-        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil ];
-    }
-    else{
-        storyboard = [UIStoryboard storyboardWithName:@"IPhone4MainStoryboard" bundle:nil ];
-    }
-    if(!_myMapViewController){
-     _myMapViewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
-    
-    }
-    [self.navigationController pushViewController:_myMapViewController animated:YES];
-
- 
-}
+////通往百度地图
+//-(void)faxian{
+//    UIStoryboard *storyboard=nil;
+//    if (iPhone5) {
+//        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil ];
+//    }
+//    else{
+//        storyboard = [UIStoryboard storyboardWithName:@"IPhone4MainStoryboard" bundle:nil ];
+//    }
+//    if(!_myMapViewController){
+//     _myMapViewController = [storyboard instantiateViewControllerWithIdentifier:@"faxian" ];
+//    
+//    }
+//    [self.navigationController pushViewController:_myMapViewController animated:YES];
+//
+// 
+//}
 
 -(IBAction)commender:(id)sender{
     

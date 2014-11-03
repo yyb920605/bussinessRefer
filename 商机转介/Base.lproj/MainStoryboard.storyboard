@@ -181,7 +181,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YrV-sd-etT">
             <objects>
-                <navigationController storyboardIdentifier="navigation" definesPresentationContext="YES" id="0mh-YL-JCv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigation" definesPresentationContext="YES" id="0mh-YL-JCv" customClass="TLNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mWI-LS-t7p">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1979,9 +1979,7 @@
                     <tabBarItem key="tabBarItem" title="首页" image="主页点击.png" id="V6J-Vv-fPS">
                         <inset key="imageInsets" minX="4" minY="8" maxX="4" maxY="2"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="系统首页" id="HqS-G2-YQT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="K6c-hP-Kfy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="系统首页" id="HqS-G2-YQT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btB-Yb-2w6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pinchGestureRecognizer id="WNm-jU-1eY"/>
